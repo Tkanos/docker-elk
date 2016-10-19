@@ -61,13 +61,19 @@ You can also choose to run it in background (detached mode):
 $ docker-compose up -d
 ```
 
+Get your ip
+
+```bash
+$ docker-machine ip <machinename>
+```
+
 Now that the stack is running, you'll want to inject logs in it. The shipped logstash configuration allows you to send content via tcp:
 
 ```bash
-$ nc localhost 5000 < /path/to/logfile.log
+$ nc <IP> 5000 < /path/to/logfile.log
 ```
 
-And then access Kibana UI by hitting [http://localhost:5601](http://localhost:5601) with a web browser.
+And then access Kibana UI by hitting [http://<IP>:5601](http://<IP>:5601) with a web browser.
 
 *NOTE*: You'll need to inject data into logstash before being able to create a logstash index in Kibana. Then all you should have to do is to
 hit the create button.
@@ -75,9 +81,7 @@ hit the create button.
 See: https://www.elastic.co/guide/en/kibana/current/setup.html#connect
 
 You can also access:
-* Sense: [http://localhost:5601/app/sense](http://localhost:5601/app/sense)
-
-*NOTE*: In order to use Sense, you'll need to query the IP address associated to your *network device* instead of localhost.
+* Sense: [http://<IP>:5601/app/sense](http://<IP>:5601/app/sense)
 
 By default, the stack exposes the following ports:
 * 5000: Logstash TCP input.
@@ -114,8 +118,6 @@ If you want to override the default configuration, add the *LS_HEAP_SIZE* enviro
 logstash:
   build: logstash/
   command: logstash -f /etc/logstash/conf.d/logstash.conf
-  volumes:
-    - ./logstash/config:/etc/logstash/conf.d
   ports:
     - "5000:5000"
   links:
@@ -141,8 +143,6 @@ Update the container in the `docker-compose.yml` to add the *LS_JAVA_OPTS* envir
 logstash:
   build: logstash/
   command: logstash -f /etc/logstash/conf.d/logstash.conf
-  volumes:
-    - ./logstash/config:/etc/logstash/conf.d
   ports:
     - "5000:5000"
     - "18080:18080"
