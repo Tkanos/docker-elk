@@ -205,6 +205,7 @@ But as this one does not work properly on Windows, because docker-compose volume
 docker-compose volumes use the repertory of "docker-machine pwd" to take its files instead  of use the local path ./ where docker-compose is launched.
 
 There are a some workarounds http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine
+(The best workaround stay to do not use docker on a windows is not build for that, seriously , but if you don't have the choice ....)
 But I don't want to spend 15 minutes doing workarounds, I only want to type docker-compose up.
 
 So is the purpose of this fork.
@@ -216,4 +217,3 @@ docker-compose up
 to enjoy your environment.
 
 Enjoy
-
