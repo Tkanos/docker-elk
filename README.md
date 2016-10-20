@@ -208,7 +208,12 @@ There are a some workarounds http://stackoverflow.com/questions/30040708/how-to-
 But I don't want to spend 15 minutes doing workarounds, I only want to type docker-compose up.
 
 So is the purpose of this fork.
-You just have to docker-compose up to enjoy your environment.
+You just have to 
+
+```bash
+docker-compose up
+```
+to enjoy your environment.
 
 Enjoy
 
