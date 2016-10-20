@@ -1,6 +1,7 @@
 # Docker ELK stack (optimize for "Docker For Windows")
 
 Run the latest version of the ELK (Elasticseach, Logstash, Kibana) stack with Docker and Docker-compose.
+This version was made to work with windows and linux.
 
 It will give you the ability to analyze any data set by using the searching/aggregation capabilities of Elasticseach and the visualization power of Kibana.
 
