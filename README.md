@@ -1,4 +1,4 @@
-# Docker ELK stack (optilmize for "Docker For Windows")
+# Docker ELK stack (optimize for "Docker For Windows")
 
 Run the latest version of the ELK (Elasticseach, Logstash, Kibana) stack with Docker and Docker-compose.
 
