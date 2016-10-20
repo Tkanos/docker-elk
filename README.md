@@ -203,7 +203,7 @@ This will store elasticsearch data inside `/path/to/storage`.
 # Fork
 
 this is a Fork from the excelent work of https://github.com/deviantony/docker-elk
-But as this one does not work properly, because docker-compose volumes command does not work properly with docker-machine.
+But as this one does not work properly on Windows, because docker-compose volumes command does not work properly with docker-machine on Windows.
 docker-compose volumes use the repertory of "docker-machine pwd" to take its files instead  of use the local path ./ where docker-compose is launched.
 
 There are a some workarounds http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine
